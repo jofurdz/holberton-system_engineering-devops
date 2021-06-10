@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /tmp
-mkdir holberton
+cd /tmp/holberton
+
