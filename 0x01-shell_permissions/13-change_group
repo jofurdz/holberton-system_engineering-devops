@@ -1,2 +1,2 @@
 #!/bin/bash
-chown 664
+chown hello holberton
