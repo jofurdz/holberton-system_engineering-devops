@@ -1,2 +1,2 @@
 #!/bin/bash
-getent passwd {1000..6000}
+getent passwd | sort /etc/passwd
