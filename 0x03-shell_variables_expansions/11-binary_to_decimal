@@ -1,0 +1,2 @@
+#!/bin/bash
+printf "%10d %i/n" $BINARY | cat -e
