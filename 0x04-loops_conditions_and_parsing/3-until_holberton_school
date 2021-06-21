@@ -1,6 +1,6 @@
 #!/bin/bash
 i=1
-until [ $i -le 10 ]
+until [ $i -ge 10 ]
 do
     echo "Holberton School"
     i=$(( i+1 ))
