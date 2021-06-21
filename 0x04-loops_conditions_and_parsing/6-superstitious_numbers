@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 #counting to 20 with specifics for line 4,9 and 19
-n=1
-while [ $n -le 20 ]
+n=0
+while [ $n -le 19 ]
 do
-    if [[ "$n" == '4' ]]; then
-       echo "bad luck from China"
-    elif [[ "$n" == '9' ]]; then
-	echo "bad luck from Japan"
-    elif [[ "$n" == '19' ]]; then
-	echo "bad luck from Italy"
-    else
-	echo $n
-    fi
+    case $n in
+	"4")echo "bad luck from China"
+	    ;;
+	"9")echo "bad luck from Japan"
+	    ;;
+	"17")echo "bad luck from Italy"
+	    ;;
+	*)
+    esac
     (( n++ ))
+    echo $n
 done
