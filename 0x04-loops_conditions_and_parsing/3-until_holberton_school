@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#until loop to print Holberton School
 i=1
 until [ $i -ge 10 ]
 do

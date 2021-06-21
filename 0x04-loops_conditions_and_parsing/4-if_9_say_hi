@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#printing Holberton School except for the 9th line 
 n=1
 while [ $n -le 10 ]
 do
