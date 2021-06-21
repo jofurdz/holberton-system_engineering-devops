@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 #counting to 20 with specifics for line 4,9 and 19
-n=0
-while [ $n -le 19 ]
+n=1
+while [ $n -le 20 ]
 do
     case $n in
-	"4")echo "bad luck from China"
+	"4")echo $n
+	    echo "bad luck from China" 
 	    ;;
-	"9")echo "bad luck from Japan"
+	"9")echo $n
+	    echo "bad luck from Japan"
 	    ;;
-	"17")echo "bad luck from Italy"
+	"17")echo $n
+	     echo "bad luck from Italy"
 	    ;;
-	*)
+	*)echo $n
+	    ;;
     esac
     (( n++ ))
-    echo $n
 done
