@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#printing Holberton School, bad luck and good luck
 n=1
 while [ $n -le 10 ]
 do

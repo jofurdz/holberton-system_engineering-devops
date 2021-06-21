@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#counting to 20 with specifics for line 4,9 and 19
 n=1
 while [ $n -le 20 ]
 do
