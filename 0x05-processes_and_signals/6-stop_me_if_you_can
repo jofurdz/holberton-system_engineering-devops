@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+#killing task 4 without kill command
+pkill 
