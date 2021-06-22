@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
+#Bash script which loops through a 12 hour clock
 n=0
 while [ $n -le 12 ]
 do
     i=1
-    echo "hour:"$n
+    echo "Hour: $n"
     while [ $i -le 59 ]
     do
-	(( i++ ))
-	echo $i	
+	echo $i
+	((i++))
     done
     ((n++))
 done
