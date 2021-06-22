@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #another infinite loop
+trap "echo I am invincible!!!" SIGTERM SIGINT
 for((;;))
-    trap "echo The program is terminated." SIGTERM SIGINT
 do
     echo "To infinity and beyond"
     sleep 2
