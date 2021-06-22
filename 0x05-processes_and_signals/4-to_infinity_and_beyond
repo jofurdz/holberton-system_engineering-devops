@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#creating an infinite loop
 for((;;))
 do
     echo "To infinity and beyond"
