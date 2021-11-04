@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#printing Holberton School, bad luck and good luck
+n=1
+while [ $n -le 10 ]
+do
+    if [[ "$n" == '4' ]]; then
+	echo "bad luck"
+    elif [[ "$n" == '8' ]]; then
+        echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+    (( n++ ))
+done

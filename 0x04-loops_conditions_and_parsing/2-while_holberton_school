@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#set n to 1
+n=1
+while [ $n -le 10 ]
+do
+    echo "Holberton School"
+    n=$(( n+1 )) 
+done

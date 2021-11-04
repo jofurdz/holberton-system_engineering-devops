@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#another infinite loop
+trap "echo I am invincible!!!" SIGTERM SIGINT
+for((;;))
+do
+    echo "To infinity and beyond"
+    sleep 2
+done

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#killing task 7
+pkill -9 -f 7-highlander
