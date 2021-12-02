@@ -1,0 +1,6 @@
+host jofurdz
+    HostName 35.229.113.168
+    User ubuntu
+    PasswordAuthenticationn No
+    StrictHostKeyChecking No
+    IdentifyFile ~/.ssh/school
