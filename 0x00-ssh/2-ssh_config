@@ -1,5 +1,5 @@
 host jofurdz
-    HostName 35.229.113.168
+    HostName 35.229.33.83
     User ubuntu
     PasswordAuthenticationn No
     StrictHostKeyChecking No
