@@ -1,6 +1,3 @@
-#!/usr/bin/ env bash
-# terminates SSL on HAproxy
-
 global
         log /dev/log    local0
         log /dev/log    local1 notice
