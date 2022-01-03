@@ -28,3 +28,11 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
+
+listen firstbalance
+        bind *:80
+        balance roundrobin
+        option forwardfor
+        option httpchk
+        server 1813-web-01 34.138.159.69:80 check
+        server 1813-web-02 35.227.86.94:80 check
