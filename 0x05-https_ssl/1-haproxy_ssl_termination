@@ -1,18 +1,26 @@
 #!/usr/bin/ env bash
 # terminates SSL on HAproxy
 
-global                                                                                                                                    
-        log /dev/log    local0                                                                                                            
-        log /dev/log    local1 notice                                                                                                     
-        chroot /var/lib/haproxy                                                                                                           
-        stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners                                                     
-        stats timeout 30s                                                                                                                 
-        user haproxy                                                                                                                      
-        group haproxy                                                                                                                     
-        daemon                                                                                                                            
-                                                                                                                                          
-        # Default SSL material locations                        
-        
+global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
+
+        # Default SSL material locations
+        ca-base /etc/ssl/certs
+        crt-base /etc/ssl/private
+
+        # Default ciphers to use on SSL-enabled listening sockets.
+        # For more information, see ciphers(1SSL). This list is from:
+        #  https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
+        ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS
+        ssl-default-bind-options no-sslv3
+
 defaults
         log     global
         mode    http
@@ -34,5 +42,5 @@ listen firstbalance
         balance roundrobin
         option forwardfor
         option httpchk
-        server 1813-web-01 34.138.159.69:80 check
-        server 1813-web-02 35.227.86.94:80 check
+        server 3250-web-01 34.138.159.69:80 check
+        server 3250-web-02 35.227.86.94:80 check
