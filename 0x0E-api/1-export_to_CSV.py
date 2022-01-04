@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """exports data in the CSV format"""
-from sys import argv
-import requests
 import csv
+import requests
+from sys import argv
 
 
 if __name__ == '__main__':
